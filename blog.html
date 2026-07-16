@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLT | Transmission Log</title>
+    <link rel="stylesheet" href="css/hero-glitch.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Inter:wght@400;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       body { background-color: #050505; color: #FFF; margin: 0; font-family: 'Inter', sans-serif; }
+       
+       
+       
+       
+       .journal-header { padding: 100px 5% 60px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 60px; }
+       .journal-title { font-family: 'Teko', sans-serif; font-size: 80px; margin: 0; color: var(--color-neon-green); }
+       .journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; padding: 0 5% 120px; max-width: 1600px; margin: 0 auto; }
+       .blog-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 24px; cursor: pointer; transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.1); padding: 20px; }
+       .blog-card:hover { transform: translateY(-10px); border-color: var(--color-neon-green); }
+       .blog-card__image { width: 100%; aspect-ratio: 16/10; object-fit: cover; background: #222; }
+       .blog-card__category { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-electric-blue); font-family: 'JetBrains Mono'; }
+       .blog-card__title { font-family: 'Teko', sans-serif; font-size: 32px; margin: 0; }
+       .blog-card__link { margin-top: auto; text-decoration: underline; color: #888; }
+   </style>
+</head>
+<body>
+   <nav class="nav-container">
+        <a href="index.html" class="logo">VOLT<span class="logo-accent">⚡</span></a>
+        <div class="nav-links">
+            <a href="collections.html" class="nav-link">Products</a>
+            <a href="article.html" class="nav-link">Science</a>
+            <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <button class="cart-btn">CART (0)</button>
+    </nav>
+   <header class="journal-header"><h1 class="journal-title">TRANSMISSION LOG</h1></header>
+   <div class="journal-grid">
+       <a href="#" class="blog-card">
+           <div class="blog-card__image"></div>
+           <div class="blog-card__content">
+               <span class="blog-card__category">Research</span>
+               <h2 class="blog-card__title">Nootropic Efficiency in Esports</h2>
+               <span class="blog-card__link">Read Data &rarr;</span>
+           </div>
+       </a>
+   </div>
+</body>
+</html>

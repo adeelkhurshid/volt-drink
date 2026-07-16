@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLT | Transmission: Nootropic Efficiency</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Inter:wght@400;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/hero-glitch.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    
+    <style>
+        body { background-color: #050505; color: #FFF; margin: 0; font-family: 'Inter', sans-serif; }
+        
+        
+        
+        
+        
+        .article-hero { position: relative; width: 100%; min-height: 70vh; display: flex; align-items: flex-end; padding: 140px 60px 60px; box-sizing: border-box; background: url('/volt-blueberry.jpeg') center/cover no-repeat; }
+        .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, #050505 0%, transparent 100%); }
+        .article-hero-content { position: relative; z-index: 2; max-width: 1000px; }
+        .article-category { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--color-electric-blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; display: block; }
+        .article-title { font-family: 'Teko', sans-serif; font-size: clamp(50px, 8vw, 100px); line-height: 0.9; margin: 0 0 20px; color: var(--color-white); text-transform: uppercase; }
+        .article-meta { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: rgba(255,255,255,0.6); display: flex; gap: 20px; flex-wrap: wrap; }
+        
+        .article-body { max-width: 800px; margin: 80px auto; padding: 0 20px; font-size: 18px; line-height: 1.8; color: rgba(255,255,255,0.8); }
+        .article-body h2 { font-family: 'Teko', sans-serif; font-size: 48px; color: var(--color-neon-green); margin: 60px 0 20px; text-transform: uppercase; line-height: 1; }
+        .article-body p { margin-bottom: 30px; }
+        .article-body blockquote { margin: 60px 0; padding: 40px; border-left: 4px solid var(--color-neon-green); background: rgba(255,255,255,0.02); font-style: italic; font-size: 24px; color: var(--color-white); }
+        .article-body img, .article-body video.article-video { width: 100%; height: auto; margin: 40px 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; filter: contrast(1.1); box-shadow: 0 0 40px rgba(0,0,0,0.5); }
+        .article-body img { filter: grayscale(100%) contrast(1.2); transition: filter 0.3s; }
+        .article-body img:hover { filter: grayscale(0%) contrast(1.2); }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <a href="index.html" class="logo">VOLT<span class="logo-accent">⚡</span></a>
+        <div class="nav-links">
+            <a href="collections.html" class="nav-link">Products</a>
+            <a href="article.html" class="nav-link">Science</a>
+            <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <button class="cart-btn">CART (0)</button>
+    </nav>
+
+    <div class="article-hero">
+        <div class="article-hero-content">
+            <span class="article-category">Research Log // 004</span>
+            <h1 class="article-title">Nootropic Efficiency in High-Stakes Environments</h1>
+            <div class="article-meta">
+                <span>AUTHOR: DR. K. VANCE</span>
+                <span>DATE: 2026.07.16</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <p>In the relentless pursuit of cognitive supremacy, the distinction between standard energy drinks and actual neural accelerators has never been more critical. Standard stimulants offer a spike—a chaotic surge of energy followed by a debilitating crash. At VOLT, we recognized the need for sustained, precise neural activation.</p>
+
+        <h2>The Cognitive Baseline</h2>
+        <p>Our initial trials focused on esports professionals and elite programmers operating in hyper-competitive, extended-duration sessions. The physiological data was clear: traditional caffeine sources degrade fine motor skills through micro-tremors over long periods.</p>
+
+        <blockquote>"We aren't just trying to keep you awake. We are calibrating your central nervous system for maximum output."</blockquote>
+
+        <video class="article-video" autoplay loop muted playsinline src="/google-flow-1.mp4"></video>
+
+        <h2>Synergistic Activation</h2>
+        <p>By pairing anhydrous caffeine with a precise ratio of L-Theanine and proprietary adaptogens, we mitigated the adrenal response. The result is a state of 'flow' that can be maintained for up to 6 hours without physiological degradation.</p>
+
+        <p>The data is conclusive: VOLT's matrix doesn't just energize; it refines. Welcome to the new standard of human performance.</p>
+    </div>
+
+    <footer class="big-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>// NAVIGATION</h4>
+                <a href="collections.html">Shop All</a>
+                <a href="article.html">Science</a>
+                <a href="team.html">Athletes</a>
+            </div>
+            <div class="footer-col">
+                <h4>// LEGAL</h4>
+                <a href="#">Privacy Protocol</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>// SOCIAL</h4>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-brand-title">VOLT ENERGY</div>
+    </footer>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+</body>
+</html>

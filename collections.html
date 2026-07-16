@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLT | Shop Catalog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Inter:wght@400;500;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/hero-glitch.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <style>
+        body {
+            background-color: var(--color-black);
+            color: #FFF;
+            margin: 0;
+            padding-top: 100px;
+        }
+
+
+
+
+
+
+
+
+        .collections-header {
+            position: relative; padding: 140px 5% 80px; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            min-height: 40vh; border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .collections-header-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: 0; opacity: 0.3; filter: contrast(1.2);
+            mix-blend-mode: screen;
+        }
+        .collections-header-content {
+            position: relative; z-index: 2; text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .collections-title {
+            font-family: 'Teko', sans-serif;
+            font-size: 120px;
+            margin: 0;
+            color: var(--color-white);
+            line-height: 0.85;
+            text-transform: uppercase;
+        }
+
+        .collections-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: var(--color-silver);
+            margin-bottom: 20px;
+            display: block;
+            letter-spacing: 0.1em;
+        }
+
+        .filters {
+            padding: 0 5% 40px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #FFF;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--color-neon-green);
+            color: var(--color-black);
+            background: var(--color-neon-green);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-container">
+        <a href="index.html" class="logo">VOLT<span class="logo-accent">⚡</span></a>
+        <div class="nav-links">
+            <a href="collections.html" class="nav-link">Products</a>
+            <a href="article.html" class="nav-link">Science</a>
+            <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <button class="cart-btn">CART (0)</button>
+    </nav>
+
+    <header class="collections-header">
+        <video class="collections-header-bg" autoplay loop muted playsinline src="/blue-ice.mp4"></video>
+        <div class="collections-header-content">
+            <span class="collections-subtitle">// COMPLETE ARSENAL</span>
+            <h1 class="collections-title">ALL NEURAL<br>FUEL</h1>
+        </div>
+    </header>
+
+    <div class="filters">
+        <button class="filter-btn active">All Systems</button>
+        <button class="filter-btn">High Stim</button>
+        <button class="filter-btn">Hydration</button>
+    </div>
+
+    <section id="products" class="products-section" style="padding-top: 40px;">
+        <div class="container">
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <a href="product.html" style="text-decoration:none; display:block;">
+                        <div class="product-card__image-container">
+                            <video src="/blue-ice.mp4" class="product-card__image" autoplay loop muted playsinline></video>
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__title">SYSTEM OVERLOAD</div>
+                            <div class="product-card__price">$34.00</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product.html" style="text-decoration:none; display:block;">
+                        <div class="product-card__image-container">
+                            <img src="/volt-blueberry.jpeg" class="product-card__image" alt="Cryogenic Freeze">
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__title">CRYOGENIC FREEZE</div>
+                            <div class="product-card__price">$34.00</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product.html" style="text-decoration:none; display:block;">
+                        <div class="product-card__image-container">
+                            <img src="/volt-neon.jpeg" class="product-card__image" alt="Neon Drive">
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__title">NEON DRIVE</div>
+                            <div class="product-card__price">$34.00</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="big-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>// NAVIGATION</h4>
+                <a href="collections.html">Shop All</a>
+                <a href="article.html">Science</a>
+                <a href="team.html">Athletes</a>
+            </div>
+            <div class="footer-col">
+                <h4>// LEGAL</h4>
+                <a href="#">Privacy Protocol</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>// SOCIAL</h4>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-brand-title">VOLT ENERGY</div>
+    </footer>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+</body>
+
+</html>

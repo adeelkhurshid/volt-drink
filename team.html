@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLT | ATHLETES</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Inter:wght@400;500;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/hero-glitch.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    
+    <style>
+        body { background-color: var(--color-black); color: #FFF; margin: 0; padding: 0; }
+        
+        .team-hero {
+            position: relative; height: 70vh; width: 100%; overflow: hidden;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+        }
+        .team-hero video {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+            filter: brightness(0.4) contrast(1.2); z-index: 0;
+        }
+        .team-hero-content {
+            position: relative; z-index: 2; padding: 40px;
+        }
+        .team-hero h1 {
+            font-family: 'Teko', sans-serif; font-size: 120px; line-height: 0.9; margin: 0;
+            background: linear-gradient(180deg, #FFF 0%, var(--color-electric-blue, #2ae6ff) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-transform: uppercase; filter: drop-shadow(0 0 30px rgba(42, 230, 255, 0.4));
+        }
+        .team-hero p {
+            font-family: 'JetBrains Mono', monospace; font-size: 16px; color: rgba(255,255,255,0.7);
+            letter-spacing: 0.1em; text-transform: uppercase; margin-top: 20px;
+        }
+
+        .roster-section {
+            position: relative; padding: 120px 5%; background: var(--color-black); overflow: hidden;
+        }
+        .roster-video-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+            opacity: 0.2; filter: blur(3px) saturate(1.5); z-index: 0; pointer-events: none;
+        }
+        .roster-grid {
+            position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1400px; margin: 0 auto;
+        }
+        .athlete-card {
+            background: rgba(10, 10, 10, 0.6); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px; overflow: hidden; backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+        .athlete-card:hover {
+            transform: translateY(-10px); border-color: var(--color-electric-blue, #2ae6ff);
+            box-shadow: 0 20px 40px rgba(42, 230, 255, 0.15);
+        }
+        .athlete-image {
+            width: 100%; height: 400px; object-fit: cover; filter: grayscale(100%) contrast(1.2);
+            transition: all 0.4s ease; border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .athlete-card:hover .athlete-image {
+            filter: grayscale(0%) contrast(1.1);
+        }
+        .athlete-info {
+            padding: 30px;
+        }
+        .athlete-name {
+            font-family: 'Teko', sans-serif; font-size: 40px; line-height: 1; margin: 0 0 10px;
+            color: #FFF; text-transform: uppercase;
+        }
+        .athlete-sport {
+            font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--color-electric-blue, #2ae6ff);
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <a href="index.html" class="logo">VOLT<span class="logo-accent">⚡</span></a>
+        <div class="nav-links">
+            <a href="collections.html" class="nav-link">Products</a>
+            <a href="article.html" class="nav-link">Science</a>
+            <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <button class="cart-btn">CART (0)</button>
+    </nav>
+
+    <header class="team-hero">
+        <video autoplay loop muted playsinline src="/video.mp4"></video>
+        <div class="team-hero-content">
+            <h1>THE VANGUARD</h1>
+            <p>Pushing the limits of human potential.</p>
+        </div>
+    </header>
+
+    <section class="roster-section">
+        <video class="roster-video-bg" autoplay loop muted playsinline src="/google-flow-2.mp4"></video>
+        
+        <div class="roster-grid">
+            
+            <div class="athlete-card">
+                <img src="/volt-neon.jpeg" class="athlete-image" alt="Athlete 1">
+                <div class="athlete-info">
+                    <h3 class="athlete-name">JAXON VEX</h3>
+                    <div class="athlete-sport">Esports / Strategy</div>
+                </div>
+            </div>
+            
+            <div class="athlete-card">
+                <img src="/volt-citrus.jpeg" class="athlete-image" alt="Athlete 2">
+                <div class="athlete-info">
+                    <h3 class="athlete-name">MIA KINETIC</h3>
+                    <div class="athlete-sport">Urban Freerunning</div>
+                </div>
+            </div>
+            
+            <div class="athlete-card">
+                <img src="/volt-blueberry.jpeg" class="athlete-image" alt="Athlete 3">
+                <div class="athlete-info">
+                    <h3 class="athlete-name">ELARA ZERO</h3>
+                    <div class="athlete-sport">Drone Racing</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="big-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>// NAVIGATION</h4>
+                <a href="collections.html">Shop All</a>
+                <a href="article.html">Science</a>
+                <a href="team.html">Athletes</a>
+            </div>
+            <div class="footer-col">
+                <h4>// LEGAL</h4>
+                <a href="#">Privacy Protocol</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>// SOCIAL</h4>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-brand-title">VOLT ENERGY</div>
+    </footer>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+</body>
+</html>

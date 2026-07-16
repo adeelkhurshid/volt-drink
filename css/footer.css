@@ -1,0 +1,90 @@
+/* ===================================
+   HIGH TECH FOOTER - PREMIUM
+   =================================== */
+.big-footer {
+    position: relative;
+    background-color: #050505;
+    color: #FFF;
+    padding: 100px 5% 40px;
+    border-top: 1px solid rgba(212, 255, 42, 0.15);
+    overflow: hidden;
+}
+
+.big-footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('/volt-citrus.jpeg') center/cover no-repeat;
+    opacity: 0.15;
+    filter: blur(5px) grayscale(50%);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.big-footer:hover::before {
+    opacity: 0.25;
+    filter: blur(0px) grayscale(0%);
+}
+
+.footer-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    background: rgba(10, 10, 10, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.footer-col h4 {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 14px;
+    color: var(--color-neon-green, #d4ff2a);
+    margin-bottom: 24px;
+    text-shadow: 0 0 10px rgba(212, 255, 42, 0.4);
+}
+
+.footer-col a {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #FFF;
+    padding-left: 8px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.footer-brand-title {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-display, 'Teko', sans-serif);
+    font-size: clamp(80px, 20vw, 400px);
+    line-height: 0.8;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.02em;
+    background: linear-gradient(180deg, #FFFFFF 0%, #d4ff2a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 20px rgba(212, 255, 42, 0.2));
+    transition: all 0.5s ease;
+    user-select: none;
+    cursor: default;
+}
+
+.footer-brand-title:hover {
+    filter: drop-shadow(0 0 40px rgba(212, 255, 42, 0.5));
+    transform: scale(1.02);
+}

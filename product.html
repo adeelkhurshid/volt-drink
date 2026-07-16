@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLT | SYSTEM OVERLOAD</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Inter:wght@400;500;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/hero-glitch.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    
+    <style>
+        body { background-color: var(--color-black); color: #FFF; margin: 0; padding-top: 100px; }
+        
+        
+        
+        
+        
+        
+        
+        
+        .pdp-container { display: flex; flex-wrap: wrap; min-height: 80vh; max-width: 1600px; margin: 0 auto; padding: 40px 5%; gap: 80px; align-items: center; }
+        
+        .pdp-image-col { flex: 1; min-width: 400px; display: flex; align-items: center; justify-content: center; position: relative; }
+        .pdp-image-wrapper { width: 100%; max-width: 600px; aspect-ratio: 1/1; border-radius: 32px; overflow: hidden; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 20px; box-sizing: border-box; }
+        .pdp-image { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; filter: brightness(0.9); transition: transform 0.8s cubic-bezier(0.25,1,0.5,1), filter 0.8s; }
+        .pdp-image-wrapper:hover .pdp-image { transform: scale(1.05); filter: brightness(1); }
+        
+        .pdp-info-col { flex: 1; min-width: 400px; display: flex; flex-direction: column; justify-content: center; }
+        .pdp-label { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--color-silver); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 16px; }
+        .pdp-title { font-family: 'Teko', sans-serif; font-size: 100px; line-height: 0.85; margin: 0 0 20px; color: var(--color-white); text-transform: uppercase; }
+        .pdp-price { font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 700; color: var(--color-white); margin-bottom: 40px; }
+        .pdp-desc { font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 40px; max-width: 500px; }
+        
+        .add-to-cart-form { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+        .qty-selector { display: flex; align-items: center; gap: 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; padding: 16px 24px; font-family: 'JetBrains Mono', monospace; font-size: 16px; }
+        .qty-btn { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 20px; cursor: pointer; transition: 0.3s; }
+        .qty-btn:hover { color: #FFF; }
+        
+        .btn-add { display: flex; justify-content: center; align-items: center; flex: 1; min-width: 250px; padding: 20px 40px; background: var(--color-neon-green); color: var(--color-black); font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border: none; border-radius: 40px; cursor: pointer; transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
+        .btn-add:hover { background: #FFF; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(255,255,255,0.2); }
+
+        .nutrition-panel { margin-top: 80px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 40px; }
+        .nutrition-title { font-family: 'Teko', sans-serif; font-size: 32px; color: #FFF; margin: 0 0 24px; font-weight: 500; }
+        .nutrition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: rgba(255,255,255,0.6); }
+        .nutrition-item { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 12px; }
+        .nutrition-item strong { color: #FFF; }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <a href="index.html" class="logo">VOLT<span class="logo-accent">⚡</span></a>
+        <div class="nav-links">
+            <a href="collections.html" class="nav-link">Products</a>
+            <a href="article.html" class="nav-link">Science</a>
+            <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <button class="cart-btn">CART (0)</button>
+    </nav>
+
+    <div class="pdp-container">
+        <div class="pdp-image-col">
+            <div class="pdp-image-wrapper">
+                <video src="/blue-ice.mp4" class="pdp-image" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; border-radius: 20px;"></video>
+            </div>
+        </div>
+        <div class="pdp-info-col">
+            <span class="pdp-label">Formula 01 // Citrus</span>
+            <h1 class="pdp-title">SYSTEM OVERLOAD</h1>
+            <div class="pdp-price">$34.00 USD</div>
+            <p class="pdp-desc">The industry standard for high-performance neural activation. 200mg of anhydrous caffeine combined with our proprietary L-Theanine ratio for laser focus without the crash. Zero sugar, maximum output.</p>
+            
+            <div class="add-to-cart-form">
+                <div class="qty-selector">
+                    <button class="qty-btn">-</button>
+                    <span>1</span>
+                    <button class="qty-btn">+</button>
+                </div>
+                <button class="btn-add">INITIATE ORDER</button>
+            </div>
+
+            <div class="nutrition-panel">
+                <h3 class="nutrition-title">METRICS</h3>
+                <div class="nutrition-grid">
+                    <div class="nutrition-item"><span>Calories</span> <strong>0</strong></div>
+                    <div class="nutrition-item"><span>Total Sugar</span> <strong>0g</strong></div>
+                    <div class="nutrition-item"><span>Caffeine</span> <strong>200mg</strong></div>
+                    <div class="nutrition-item"><span>L-Theanine</span> <strong>100mg</strong></div>
+                    <div class="nutrition-item"><span>Vitamin B12</span> <strong>500%</strong></div>
+                    <div class="nutrition-item"><span>Electrolytes</span> <strong>350mg</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="big-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>// NAVIGATION</h4>
+                <a href="collections.html">Shop All</a>
+                <a href="article.html">Science</a>
+                <a href="team.html">Athletes</a>
+            </div>
+            <div class="footer-col">
+                <h4>// LEGAL</h4>
+                <a href="#">Privacy Protocol</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>// SOCIAL</h4>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-brand-title">VOLT ENERGY</div>
+    </footer>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+</body>
+</html>

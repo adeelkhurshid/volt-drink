@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLT | High Performance Energy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Inter:wght@400;500;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/hero-glitch.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script type="module" src="js/carousel.js"></script>
+
+    <style>
+        /* Smooth Scroll */
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+
+
+        /* Video Sections */
+        .full-video-section {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .full-video-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            background: rgba(10, 10, 10, 0.4);
+            padding: 60px 80px;
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-grid {
+            display: flex;
+            gap: 60px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Teko', sans-serif;
+            font-size: 80px;
+            margin: 0;
+            color: var(--color-white);
+            line-height: 1;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item p {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--color-silver);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-container">
+        <a href="index.html" class="logo">VOLT<span class="logo-accent">⚡</span></a>
+        <div class="nav-links">
+            <a href="collections.html" class="nav-link">Products</a>
+            <a href="article.html" class="nav-link">Science</a>
+            <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <button class="cart-btn">CART (0)</button>
+    </nav>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+
+    <section class="hero-carousel">
+        <div class="carousel-container">
+
+            <div class="carousel-slide active">
+                <video class="carousel-video" autoplay loop muted playsinline src="/video.mp4"></video>
+                <div class="carousel-content-split">
+                    <div class="hero-top-left">
+                        <div class="carousel-label">FORMULA 01</div>
+                        <h1 class="carousel-headline">SYSTEM<br>OVERLOAD</h1>
+                    </div>
+                    <div class="hero-bottom-right glass-panel">
+                        <p class="carousel-tagline">Original Citrus Blend</p>
+                        <p class="carousel-description">200mg Caffeine. Zero Sugar.</p>
+                        <div class="carousel-price">
+                            <span class="price-amount">$34</span><span class="price-unit">/ 12 Pack</span>
+                        </div>
+                        <div class="carousel-cta">
+                            <button class="btn-primary" onclick="scrollToProducts()">INITIATE ORDER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <video class="carousel-video" loop muted playsinline
+                    src="/google-flow-1.mp4"></video>
+                <div class="carousel-content-split">
+                    <div class="hero-top-left">
+                        <div class="carousel-label" style="color:var(--color-electric-blue)">FORMULA 02</div>
+                        <h1 class="carousel-headline">CRYOGENIC<br>FREEZE</h1>
+                    </div>
+                    <div class="hero-bottom-right glass-panel">
+                        <p class="carousel-tagline">Blue Raspberry Ice</p>
+                        <p class="carousel-description">Enhanced with Nootropics for laser focus.</p>
+                        <div class="carousel-price">
+                            <span class="price-amount">$34</span><span class="price-unit">/ 12 Pack</span>
+                        </div>
+                        <div class="carousel-cta">
+                            <button class="btn-primary" style="background:var(--color-electric-blue); color:#000;"
+                                onclick="scrollToProducts()">INITIATE ORDER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <video class="carousel-video" loop muted playsinline
+                    src="/google-flow-2.mp4"></video>
+                <div class="carousel-content-split">
+                    <div class="hero-top-left">
+                        <div class="carousel-label" style="color:var(--color-cyber-purple)">FORMULA 03</div>
+                        <h1 class="carousel-headline">NEON<br>DRIVE</h1>
+                    </div>
+                    <div class="hero-bottom-right glass-panel">
+                        <p class="carousel-tagline">Grape Electrolyte</p>
+                        <p class="carousel-description">Rapid hydration for physical endurance.</p>
+                        <div class="carousel-price">
+                            <span class="price-amount">$34</span><span class="price-unit">/ 12 Pack</span>
+                        </div>
+                        <div class="carousel-cta">
+                            <button class="btn-primary" style="background:var(--color-cyber-purple); color:#FFF;"
+                                onclick="scrollToProducts()">INITIATE ORDER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-nav carousel-nav--prev" onclick="prevSlide()">&larr;</button>
+        <button class="carousel-nav carousel-nav--next" onclick="nextSlide()">&rarr;</button>
+        <div class="carousel-pagination">
+            <button class="pagination-dot active" onclick="goToSlide(0)"></button>
+            <button class="pagination-dot" onclick="goToSlide(1)"></button>
+            <button class="pagination-dot" onclick="goToSlide(2)"></button>
+        </div>
+    </section>
+
+    <!-- Performance Metrics Section Hidden as requested -->
+
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="section-label">// CATALOG_V1.0</div>
+                    <h2 class="section-headline">SELECT FUEL</h2>
+                </div>
+            </div>
+
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <a href="product.html" style="text-decoration:none; display:block;">
+                        <div class="product-card__image-container">
+                            <img src="/volt-citrus.jpeg" class="product-card__image" alt="System Overload">
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__title">SYSTEM OVERLOAD</div>
+                            <div class="product-card__price">$34.00</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product.html" style="text-decoration:none; display:block;">
+                        <div class="product-card__image-container">
+                            <img src="/volt-blueberry.jpeg" class="product-card__image" alt="Cryogenic Freeze">
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__title">CRYOGENIC FREEZE</div>
+                            <div class="product-card__price">$34.00</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product.html" style="text-decoration:none; display:block;">
+                        <div class="product-card__image-container">
+                            <img src="/volt-neon.jpeg" class="product-card__image" alt="Neon Drive">
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__title">NEON DRIVE</div>
+                            <div class="product-card__price">$34.00</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="big-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>// NAVIGATION</h4>
+                <a href="collections.html">Shop All</a>
+                <a href="article.html">Science</a>
+                <a href="team.html">Athletes</a>
+            </div>
+            <div class="footer-col">
+                <h4>// LEGAL</h4>
+                <a href="#">Privacy Protocol</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>// SOCIAL</h4>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-brand-title">VOLT ENERGY</div>
+    </footer>
+
+</body>
+
+</html>
